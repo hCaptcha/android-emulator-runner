@@ -39,7 +39,7 @@ jobs:
     
     steps:
     - name: checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
     - name: build, test and lint
       run: |
@@ -48,12 +48,12 @@ jobs:
         npm run lint
         npm test
 
-    - uses: actions/setup-java@v4
+    - uses: actions/setup-java@3a4f6e1af504cf6a31855fa899c6aa5355ba6c12 # v4.7.0
       with:
         distribution: 'zulu'
         java-version: 23
 
-    - uses: gradle/actions/setup-gradle@v4
+    - uses: gradle/actions/setup-gradle@b5c8a0dca2731e85b6e85238a73680f5151738e9 # v4.3.1
 
     - name: enable KVM for linux runners
       if: runner.os == 'Linux'
